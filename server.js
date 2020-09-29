@@ -26,6 +26,8 @@ app.get('/card-wallet', async (req, res) => {
   res.status(200).json({client_secret: intent.client_secret})
 });
 
-app.listen(8000, () => {
-  console.log('Running on port 8000');
+const port = process.env.PORT || 8000
+
+app.listen(port, () => {
+  console.log(`Running on port ${port}`);
 });
